@@ -1,6 +1,7 @@
-FROM alpine:3.2
+FROM alpine
 
-RUN apk --update add python py-pip && \
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories &&\
+    apk --update add python py-pip && \
     pip install elasticsearch-curator==3.4.0
 
 # add tasks scripts

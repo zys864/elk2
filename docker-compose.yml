@@ -1,5 +1,5 @@
 elasticsearch:
-   image: elasticsearch:2.2
+   image: elasticsearch:2.4.0
    restart: always
    log_opt:
       max-size: "10m"
@@ -22,7 +22,7 @@ logstash:
      - elasticsearch
 
 kibana:
-   image: kibana:4.4
+   image: kibana:4.6.0
    restart: always
    log_opt:
       max-size: "10m"
